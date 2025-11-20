@@ -57,21 +57,18 @@ A **4:1 multiplexer** selects one of four data inputs (i0..i3) and routes it to 
 ## Verilog Program (`mux4to1.v`)
 
 ```verilog
-`timescale 1ns / 1ps
-module mux4to1 (
-    input  wire i0,
-    input  wire i1,
-    input  wire i2,
-    input  wire i3,
-    input  wire [1:0] sel,
-    output wire y
-);
-    //
---
---
---
 
-   endmodule
+`module MUX4_1(I,s,Y);
+input [3:0]I;
+input [1:0]s; output Y;
+wire [4:1]w;
+assign w[1]=(~s[1])&&(~s[0])&&I[0];
+assign w[2]=(~s[1])&&(s[0])&&I[1];
+assign w[3]=(s[1])&&(~s[0])&&I[2];
+assign w[4]=(s[1])&&(s[0])&&I[3];
+assign Y=w[1]||w[2]||w[3]||w[4];
+endmodule
+
 ```
 ## Constraint file for Seven-Segment Display
 ```
