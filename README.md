@@ -27,6 +27,8 @@ A **4:1 multiplexer** selects one of four data inputs (i0..i3) and routes it to 
 | 1  | 1  | D3  |
 
 **Logic Diagram:**
+
+
 <img width="463" height="368" alt="image" src="https://github.com/user-attachments/assets/7e2b9a82-5482-4265-8007-4c3761706314" />
 
 ---
