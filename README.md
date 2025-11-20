@@ -60,7 +60,7 @@ A **4:1 multiplexer** selects one of four data inputs (i0..i3) and routes it to 
 
 ```verilog
 
-`module MUX4_1(I,s,Y);
+module MUX4_1(I,s,Y);
 input [3:0]I;
 input [1:0]s; output Y;
 wire [4:1]w;
